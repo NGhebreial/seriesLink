@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical" >
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Choose a Tv Show" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/seleccionar"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/holo_blue_dark"
+            android:elevation="20dp"
+            android:lineSpacingExtra="24sp"
+            android:onClick="seleccionado"
+            android:text="Choose"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textColorLink="@android:color/holo_blue_dark"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/cancelar"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:layout_width="99dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@android:color/darker_gray"
+            android:elevation="20dp"
+            android:lineSpacingExtra="24sp"
+            android:onClick="volver"
+            android:text="Cancel"
+            android:textAlignment="center"
+            android:textColor="@android:color/background_light"
+            android:textColorLink="@android:color/holo_blue_dark"
+            android:textStyle="bold" />
+    </GridLayout>
+
+    <ListView
+        android:id="@android:id/list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>
+

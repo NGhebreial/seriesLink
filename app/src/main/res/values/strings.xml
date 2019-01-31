@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">SeriesLink</string>
+    <string name="title_activity_serie_view">SerieViewActivity</string>
+</resources>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context="com.ubicua.nadia.serieslink.activities.SerieViewActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:title="Tv Show selected" />
+
+    <Button
+        android:id="@+id/volver"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="99dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/darker_gray"
+        android:elevation="20dp"
+        android:lineSpacingExtra="24sp"
+        android:onClick="volver"
+        android:text="Back"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textColorLink="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        android:layout_marginEnd="46dp"
+        android:layout_above="@+id/imgTitle"
+        android:layout_alignEnd="@+id/details" />
+
+    <Button
+        android:id="@+id/eliminar"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="104dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_dark"
+        android:elevation="20dp"
+        android:lineSpacingExtra="24sp"
+        android:onClick="eliminar"
+        android:text="Delete"
+        android:textAlignment="center"
+        android:textColor="@android:color/background_light"
+        android:textColorLink="@android:color/holo_blue_dark"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/title"
+        android:layout_alignStart="@+id/details"
+        android:layout_marginTop="13dp" />
+
+
+    <GridLayout
+        android:id="@+id/imgTitle"
+        android:layout_width="match_parent"
+        android:layout_height="150sp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/eliminar">
+
+        <ImageView
+            android:id="@+id/poster"
+            android:layout_width="142dp"
+            android:layout_height="150sp"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="179dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="23dp"
+            android:layout_marginEnd="754dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="8dp"
+            android:textSize="24sp"
+            tools:text="Title" />
+
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="120sp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/imgTitle"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:id="@+id/genresLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Gender: " />
+
+        <TextView
+            android:id="@+id/genres"
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Gender" />
+
+        <TextView
+            android:id="@+id/dateLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:layout_marginTop="10dp"
+            android:text="Init date" />
+
+        <TextView
+            android:id="@+id/statusLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="2"
+            android:layout_marginTop="10dp"
+            android:text="State: " />
+
+        <TextView
+            android:id="@+id/avgLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="0"
+            android:layout_row="3"
+            android:layout_marginTop="10dp"
+            android:text="Punctuation: " />
+
+
+
+        <TextView
+            android:id="@+id/avg"
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="3"
+            android:layout_marginTop="10dp"
+            android:text="AVG" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="271dp"
+            android:layout_height="25sp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:text="Date" />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="273dp"
+            android:layout_height="wrap_content"
+            android:layout_column="1"
+            android:layout_row="2"
+            android:layout_marginTop="10dp"
+            android:text="Estado" />
+
+
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/details"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="361dp"
+            android:layout_height="match_parent"
+            android:layout_column="0"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="10dp"
+            android:layout_row="0"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="true"
+            android:isScrollContainer="true"
+            android:scrollIndicators="right"
+            android:text="Description"
+            android:textSize="16sp"
+            tools:text="Subtitle" />
+    </GridLayout>
+
+
+</RelativeLayout>
